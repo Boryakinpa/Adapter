@@ -152,8 +152,8 @@ public class Adapter : PCGame
 
     public Requirements getRequirements()
     {
-        Requirements requirements = new Requirements(gpuGb: adaptee.getMinimumGpuMemoryInMegabytes()/1024, HDDGb: adaptee.getDiskSpaceNeededInGB(), RAMGb: adaptee.getRamNeededInGb(),
-            cpuGhz: adaptee.getCoreSpeedInGhz(), coresNum: adaptee.getMinimumGpuMemoryInMegabytes());
+        Requirements requirements = new Requirements(gpuGb: adaptee.getMinimumGpuMemoryInMegabytes()/8192, HDDGb: adaptee.getDiskSpaceNeededInGB()/8, RAMGb: adaptee.getRamNeededInGb(),
+            cpuGhz: adaptee.getCoreSpeedInGhz(), coresNum: adaptee.getCoresNeeded());
         return requirements;
     }
 
